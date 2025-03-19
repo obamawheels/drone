@@ -26,9 +26,11 @@ def control_drone(command):
     elif command == "LAND":
         drone.land()
     elif command == "MOVE RIGHT":
-        drone.set_roll(10)  # Move right
+        drone.set_roll(20)
+        drone.move(1)  # Move right
     elif command == "MOVE LEFT":
-        drone.set_roll(-10)  # Move left
+        drone.set_roll(-20)
+        drone.move(1)  # Move left
     time.sleep(0.3)  # Short delay to avoid rapid commands
 
 # Gesture Control Loop
